@@ -1,0 +1,38 @@
+/*
+    Document   : index.css
+    Created on : 2014-03-29 11:01 PM
+    Author     : jamwjam
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+html, body {
+    height:100%;
+    margin:0px;
+}
+
+.panel {
+    height:100%;
+    width:100%;
+    text-align:center;
+}
+
+h1,h2 {
+    margin:0px;
+    padding:0px;
+}
+
+#pg0 {
+    background:#ACCEDE;
+}
+
+#pg1 {
+    background:#FACADE;
+}
+
+#pg2 {
+    background:#B1A5ED;
+}h1, h2 {
+    margin:0px;
+    pad

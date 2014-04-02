@@ -1,11 +1,36 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<h1>Hello world!</h1>
-	<p>I'm hosted with Github Pages.</p>
-</body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/jquery-scrollto.js"></script>
+
+    </head>
+    <body>
+        <div class="panel" id="pg0">
+            <h1>Calling all recruiters!</h1>
+            <h2>Calling all recruiters!</h2>
+         
+            <button onclick="scroll('#pg1');">Scroll to next page!</button>
+            <button onclick="scroll('#pg2');">Scroll to third page!</button>
+            <a href="raphael.php">RaphaelJS</a>
+      
+        </div>
+        <div class="panel" id="pg1">
+            <a href="/jquery-scrollto/index.html">jquery-scrollto</a>
+            <a href="https://raw.githubusercontent.com/DmitryBaranovskiy/raphael/master/raphael-min.js">Raphaël js</a>
+        </div>
+        <div class="panel" id="pg2">
+            YOLO
+        </div>
+        
+        <script>
+            function scroll(id){
+                $(id).ScrollTo();
+            }
+        </script>
+        
+    </body>
 </html>
