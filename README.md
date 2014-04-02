@@ -1,6 +1,6 @@
 jamwjam.github.io
 =================
 
-##My personal websit
+##My personal website
 
-Place to blog, showcase my ptoject, talk about stuff.
+Place for me to blog, showcase my ptoject, talk about stuff.
