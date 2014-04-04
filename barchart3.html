@@ -1,0 +1,59 @@
+<!--
+To change this template use Tools | Templates.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <script src="js/d3.min.js" charset="utf-8"></script>
+    <style>
+    .chart rect {
+        fill: steelblue;
+    }
+        
+    .chart text {
+        fill: white;
+        font: 10px sans-serif;
+        text-anchor: middle;
+    }
+    </style>
+</head>
+<body>
+    <svg class="chart"></svg>
+    <script>
+        var width = 500;
+        var height = 300;
+        var y = d3.scale.linear().range([height, 0]);
+        
+        var chart = d3.select(".chart")
+        .attr("width", width)
+        .attr("height", height);
+        
+        d3.tsv("data.tsv", type, function(error, data) {
+            y.domain([0, d3.max(data, function(d){return d.value;})]);
+            
+            var barWidth = width / data.length;
+            var bar = chart.selectAll("g")
+            .data(data)
+            .enter().append("g")
+            .attr("transform", function(d,i){return "translate(" + i * barWidth + ",0)";});
+            
+            bar.append("rect")
+            .attr("y", function(d){return y(d.value);})
+            .attr("height", function(d) {return height - y(d.value);})
+            .attr("width", barWidth - 1);
+            
+            bar.append("text")
+            .attr("x", barWidth / 2)
+            .attr("y", function(d) { return y(d.value) + 3;})
+            .attr("dy", ".75em")
+            .text(function(d) {return d.value;});
+        });
+        
+        function type(d) {
+            d.value = +d.value;
+            return d;
+        }
+
+    </script>
+</body>
+</html>
