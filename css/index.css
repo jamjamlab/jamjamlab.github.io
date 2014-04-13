@@ -14,18 +14,16 @@ html, body {
 
 .panel {
     height:100%;
-    width:100%;
-    text-align:center;
+    text-align: center;
 }
 
-h1,h2 {
+h1 {
     margin:0px;
     padding:0px;
 }
 
 #pg0 {
     background:#ACCEDE;
-    text-align:center;
 }
 
 #pg1 {

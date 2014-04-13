@@ -9,30 +9,44 @@
         <script src="js/d3.min.js" charset="utf-8"></script>
         <style>
             .container {
+                display:block;
                 text-align:center;
-                border: 1px dotted black;
-                width: 400px;
-                height: 50%;
-                margin: auto;
+                border: 3px solid black;
+                margin: 20px auto;
+                width:500px;
+                background:#FFFFFF;
             }
-            
-            div > .container {
-                display:inline-block;
+
+            .display {
+           
+                width: 500px;
+                margin: 0 auto;
+                text-align: left;
+                padding-top: 20px;
             }
         </style>
     </head>
     <body>
         <div class="panel" id="pg0">
-            <h1>This is a push from Codio.</h1>
-            <button onclick="scroll('#pg1');">Scroll to next page!</button>
-            <button onclick="scroll('#pg2');">Scroll to third page!</button>
-            <div class="container">
             
+            
+            <div class="display">
+                <h1>James Kim | jamwjam.github.io</h1>
+                <p>Nothing to see here.. yet another bare-bones D3JS sandbox.</p>
+                <button onclick="scroll('#pg1');">Scroll to next page!</button>
+                <button onclick="scroll('#pg2');">Scroll to third page!</button>
             </div>
-        </div>
-        <div class="panel" id="pg1">
-            <a href="/jquery-scrollto/index.html">jquery-scrollto</a>
-            <a href="https://raw.githubusercontent.com/DmitryBaranovskiy/raphael/master/raphael-min.js">Raphaël js</a>
+            <h2>Circles!</h2>
+            <div class="container" id="p1"></div>
+            <h2>Bar Chart!</h2>
+            <div class="container" id="p2"></div>
+            <h2>Scatter Plot!</h2>
+            <div class="container" id="p3"></div><h1>Scattle Plots!</h1> <div class="panel" id="pg1">
+            <div class="display">
+                 <h1>List of useful tools:</h1>
+                 <a href="/jquery-scrollto/index.html">jquery-scrollto</a>
+                 <a href="https://raw.githubusercontent.com/DmitryBaranovskiy/raphael/master/raphael-min.js">Raphaël js</a>
+            </div>
         </div>
         <div class="panel" id="pg2">
            
@@ -42,7 +56,117 @@
             function scroll(id){
                 $(id).ScrollTo();
             }
+            
+                var dataset0 = [ 5, 10, 15, 20, 25 ];
+            var dataset1 = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
+                            11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
+            var dataset2 = [
+                            [5, 20], [480, 90], [250, 50], [100, 33], [330, 95],
+                            [410, 12], [475, 44], [25, 67], [85, 21], [220, 88]
+                          ];
+            var w = 500;
+            var h = 100;
+            var barPadding = 1;
+
+            var svg = d3.select("#p1")
+                        .append("svg")
+                        .attr("width", w)
+                        .attr("height", h);
+
+            var circles = svg.selectAll("circle")
+                        .data(dataset0)
+                        .enter()
+                        .append("circle");
+
+            circles.attr("cx", function(d,i){
+                          return (i * 50) + 25;
+                        })
+                        .attr("cy", "50px")
+                        .attr("r", function(d){
+                          return d;
+                        })
+                        .attr("fill", "yellow")
+                        .attr("stroke", "orange");
+
+            var svg = d3.select("#p2")
+                        .append("svg")
+                        .attr("width", w)
+                        .attr("height", h);
+
+            svg.selectAll("rect")
+               .data(dataset1)
+               .enter()
+               .append("rect")
+               .attr("x", function(d,i){
+                 return i * (w / dataset1.length);
+               })
+               .attr("y", function(d,i){
+                 return h - d * 4;
+               })
+               .attr("width", w / dataset1.length - barPadding)
+               .attr("height", function(d,i){
+                 return d * 4;
+               })
+               .attr("fill", function(d) {
+                 return "rgb(0, 0, " + (d * 10) + ")";
+               });
+
+            svg.selectAll("text")
+            .data(dataset1)
+            .enter()
+            .append("text")
+            .text(function(d){
+              return d;
+            })
+            .attr("x", function(d,i){
+              return i * (w / dataset1.length) + (w / dataset1.length - barPadding) / 2;
+            })
+            .attr("y", function(d){
+              return h - (d * 4) + 14;
+            })
+            .attr("font-family", "sans-serif")
+            .attr("font-size", "11px")
+            .attr("fill", "white")
+            .attr("text-anchor", "middle");
+
+            var svg = d3.select("#p3")
+            .append("svg")
+            .attr("width",w)
+            .attr("height",h);
+
+            svg.selectAll("circle")
+            .data(dataset2)
+            .enter()
+            .append("circle")
+            .attr("cx", function(d){
+              return d[0];
+            })
+            .attr("cy", function(d){
+              return d[1];
+            })
+            .attr("r", function(d){
+              return Math.sqrt(h-d[1])
+            });
+
+            svg.selectAll("text")
+            .data(dataset2)
+            .enter()
+            .append("text")
+            .text(function(d){
+              return d;
+            })
+            .attr("x", function(d){
+              return d[0];
+            })
+            .attr("y", function(d){
+              return d[1];
+            })
+            .attr("font-family","sans-serif")
+            .attr("font-size", "11px")
+            .attr("fill", "red");
         </script>
+        
+        
         
     </body>
 </html>
