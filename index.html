@@ -6,13 +6,29 @@
         <link href="css/index.css" rel="stylesheet">
         <script src="js/jquery-2.1.0.min.js"></script>
         <script src="js/jquery-scrollto.js"></script>
-
+        <script src="js/d3.min.js" charset="utf-8"></script>
+        <style>
+            .container {
+                text-align:center;
+                border: 1px dotted black;
+                width: 400px;
+                height: 50%;
+                margin: auto;
+            }
+            
+            div > .container {
+                display:inline-block;
+            }
+        </style>
     </head>
     <body>
         <div class="panel" id="pg0">
             <h1>This is a push from Codio.</h1>
             <button onclick="scroll('#pg1');">Scroll to next page!</button>
             <button onclick="scroll('#pg2');">Scroll to third page!</button>
+            <div class="container">
+            
+            </div>
         </div>
         <div class="panel" id="pg1">
             <a href="/jquery-scrollto/index.html">jquery-scrollto</a>
