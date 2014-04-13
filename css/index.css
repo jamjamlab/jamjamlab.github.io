@@ -25,6 +25,7 @@ h1,h2 {
 
 #pg0 {
     background:#ACCEDE;
+    text-align:center;
 }
 
 #pg1 {
@@ -33,6 +34,4 @@ h1,h2 {
 
 #pg2 {
     background:#B1A5ED;
-}h1, h2 {
-    margin:0px;
-    pad
+}
