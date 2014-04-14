@@ -15,6 +15,8 @@
                 margin: 20px auto;
                 width:500px;
                 background:#FFFFFF;
+                
+                margin-bottom: 0px;
             }
 
             .display {
@@ -23,12 +25,12 @@
                 margin: 0 auto;
                 text-align: left;
                 padding-top: 20px;
+               
             }
         </style>
     </head>
     <body>
-        <div class="panel" id="pg0">
-            
+        <div class="wrap_panel" id="pg0">
                <div class="display">
                 <h1>James Kim | jamwjam.github.io</h1>
                 <p>Nothing to see here.. yet another bare-bones D3JS sandbox.</p>
@@ -41,6 +43,7 @@
             <div class="container" id="p2"></div>
             <h2>Scatter Plot!</h2>
             <div class="container" id="p3"></div>
+            </div>
        <div class="panel" id="pg1">
             <div class="display">
                  <h1>List of useful tools:</h1>
@@ -50,7 +53,7 @@
          
         </div>
         <div class="panel" id="pg2">
-           
+          
         </div>
         
         <script>
@@ -58,7 +61,9 @@
                 $(id).ScrollTo();
             }
             
-                var dataset0 = [ 5, 10, 15, 20, 25 ];
+            
+            
+            var dataset0 = [ 5, 10, 15, 20, 25 ];
             var dataset1 = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
                             11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
             var dataset2 = [
