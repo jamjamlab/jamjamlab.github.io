@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-    <title>Welcome</title>
+    <title>James Kim</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/jquery-scrollto.js"></script>
     <script charset="utf-8" src="js/d3.min.js"></script>
-    <script src="js/topojson.js"></script>
+    <script src="js/myd3.js"></script>
     <script src="http://datamaps.github.io/scripts/datamaps.world.min.js"></script>
     <script async="" src="//codepen.io/assets/embed/ei.js"></script>
 </head>
@@ -17,11 +18,7 @@
     <div class="wrap_panel" id="pg0">
         <div class="display">
             <h1>James Kim | jamwjam.github.io</h1>
-
-            <p>Nothing to see here.. yet another bare-bones D3JS
-            sandbox.</p><button onclick="scroll('#pg1');">Scroll to next
-            page!</button> <button onclick="scroll('#pg2');">Scroll to third
-            page!</button>
+            <p>Nothing to see here.. yet another bare-bones D3JS sandbox.</p>
         </div>
 
         <div class="container" id="p1"></div>
@@ -37,11 +34,10 @@
         <h2>Scatter Plot!</h2>
 
         <div class="container" id="p4">
-            <p class='codepen' data-default-tab="result" data-height="357"
-            data-slug-hash="ekhqu" data-theme-id="0">See the Pen <a href=
-            'http://codepen.io/jamwjam/pen/ekhqu/'>jaems.me</a> by Jung Kim
-            (<a href='http://codepen.io/jamwjam'>@jamwjam</a>) on <a href=
-            'http://codepen.io'>CodePen</a>.</p>
+            <p class='codepen' data-default-tab="result" data-height="357" data-slug-hash="ekhqu" data-theme-id="0">See the Pen
+                <a href='http://codepen.io/jamwjam/pen/ekhqu/'>jaems.me</a>by Jung Kim (
+                <a href='http://codepen.io/jamwjam'>@jamwjam</a>) on
+                <a href='http://codepen.io'>CodePen</a>.</p>
         </div>
 
         <h2>Datamap</h2>
@@ -51,119 +47,31 @@
 
     <div class="panel" id="pg2"></div>
     <script>
-        var map = new Datamap({element: document.getElementById('worldmap')});
-            function scroll(id){
-                $(id).ScrollTo();
-            }    
+        var map = new Datamap({
+            element: document.getElementById('worldmap')
+        });
     </script>
     <script>
-        var dataset0 = [ 5, 10, 15, 20, 25 ];
-            var dataset1 = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
-                            11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
-            var dataset2 = [
-                            [5, 20], [480, 90], [250, 50], [100, 33], [330, 95],
-                            [410, 12], [475, 44], [25, 67], [85, 21], [220, 88]
-                          ];
-            var w = 500;
-            var h = 100;
-            var barPadding = 1;
-
-            var svg = d3.select("#p1")
-                        .append("svg")
-                        .attr("width", w)
-                        .attr("height", h);
-
-            var circles = svg.selectAll("circle")
-                        .data(dataset0)
-                        .enter()
-                        .append("circle");
-
-            circles.attr("cx", function(d,i){
-                          return (i * 50) + 25;
-                        })
-                        .attr("cy", "50px")
-                        .attr("r", function(d){
-                          return d;
-                        })
-                        .attr("fill", "yellow")
-                        .attr("stroke", "orange");
-
-            var svg = d3.select("#p2")
-                        .append("svg")
-                        .attr("width", w)
-                        .attr("height", h);
-
-            svg.selectAll("rect")
-               .data(dataset1)
-               .enter()
-               .append("rect")
-               .attr("x", function(d,i){
-                 return i * (w / dataset1.length);
-               })
-               .attr("y", function(d,i){
-                 return h - d * 4;
-               })
-               .attr("width", w / dataset1.length - barPadding)
-               .attr("height", function(d,i){
-                 return d * 4;
-               })
-               .attr("fill", function(d) {
-                 return "rgb(0, 0, " + (d * 10) + ")";
-               });
-
-            svg.selectAll("text")
-            .data(dataset1)
-            .enter()
-            .append("text")
-            .text(function(d){
-              return d;
-            })
-            .attr("x", function(d,i){
-              return i * (w / dataset1.length) + (w / dataset1.length - barPadding) / 2;
-            })
-            .attr("y", function(d){
-              return h - (d * 4) + 14;
-            })
-            .attr("font-family", "sans-serif")
-            .attr("font-size", "11px")
-            .attr("fill", "white")
-            .attr("text-anchor", "middle");
-
-            var svg = d3.select("#p3")
-            .append("svg")
-            .attr("width",w)
-            .attr("height",h);
-
-            svg.selectAll("circle")
-            .data(dataset2)
-            .enter()
-            .append("circle")
-            .attr("cx", function(d){
-              return d[0];
-            })
-            .attr("cy", function(d){
-              return d[1];
-            })
-            .attr("r", function(d){
-              return Math.sqrt(h-d[1])
-            });
-
-            svg.selectAll("text")
-            .data(dataset2)
-            .enter()
-            .append("text")
-            .text(function(d){
-              return d;
-            })
-            .attr("x", function(d){
-              return d[0];
-            })
-            .attr("y", function(d){
-              return d[1];
-            })
-            .attr("font-family","sans-serif")
-            .attr("font-size", "11px")
-            .attr("fill", "red");
+        var dataset0 = [5, 10, 15, 20, 25];
+        var dataset1 = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
+            11, 12, 15, 20, 18, 17, 16, 18, 23, 25
+        ];
+        var dataset2 = [
+            [5, 20],
+            [480, 90],
+            [250, 50],
+            [100, 33],
+            [330, 95],
+            [410, 12],
+            [475, 44],
+            [25, 67],
+            [85, 21],
+            [220, 88]
+        ];
+        myd3.circles(dataset0, "#p1");
+        myd3.barchart(dataset1, "#p2");
+        myd3.scatterplot(dataset2, "#p3");
     </script>
 </body>
+
 </html>
