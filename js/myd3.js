@@ -106,4 +106,8 @@ var myd3 = {
             .attr("font-size", "11px")
             .attr("fill", "red");
     }
+    
+    scale: function (dataset, id) {
+    
+}
 };
