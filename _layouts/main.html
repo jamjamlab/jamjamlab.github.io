@@ -11,9 +11,19 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
-
+        
+        <!-- Bootstrap core CSS -->
+        <link href="/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Bootstrap Optional thene -->
+        <link rel="stylesheet" href="/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     </head>
     <body>
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">{{ site.name }}</a>
+            </div>
+        </div>
 
         <div class="site">
           <div class="header">
@@ -24,6 +34,11 @@
           </div>
 
           {{ content }}
+           
+          <!-- This block should be in your index.html -->
+          <div class="home">
+ 
+          </div>
 
           <div class="footer">
             <div class="contact">
@@ -41,6 +56,8 @@
             </div>
           </div>
         </div>
-
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     </body>
 </html>
