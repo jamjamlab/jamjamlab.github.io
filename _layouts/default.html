@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Optional thene -->
+    <link rel="stylesheet" href="/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">{{ site.name }}</a>
+        </div>
+    </div>
+    <div class="site">
+        <div class="header">
+            <h1 class="title">
+                <a href="/">{{ site.name }}</a>
+            </h1>
             <a class="extra" href="/">home</a>
             <a class="extra" href="/about/">about</a>
             <a class="extra" href="/blog/">blog</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                James Kim<br />
-                CS Undergraduate at University of Maryland<br />
-                jamwjam@gmail.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/jamwjam">github.com/jamwjam</a><br />
-                <a href="https://twitter.com/jamwjam">twitter.com/jamwjam</a><br />
-              </p>
-            </div>
-          </div>
         </div>
-    </body>
+
+        {{ content }}
+
+        <div class="footer">
+            <div class="contact">
+                <p>
+                    James Kim
+                    <br />CS Undergraduate at University of Maryland
+                    <br />jamwjam@gmail.com
+                </p>
+            </div>
+            <div class="contact">
+                <p>
+                    <a href="https://github.com/jamwjam">github.com/jamwjam</a>
+                    <br />
+                    <a href="https://twitter.com/jamwjam">twitter.com/jamwjam</a>
+                    <br />
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+
 </html>
