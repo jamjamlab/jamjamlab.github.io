@@ -9,4 +9,3 @@ Hello and nice to meet you. I'm currently a 21-year old computer science undergr
 I created this blog with my intent to utilize it as an outlet; a place where I could dump my personal thoughts. I thought it would be nice to express my reflections of being a CS student (And topics that interests me).
 
 Stay tuned!
-James
