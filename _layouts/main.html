@@ -1,63 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-        
-        <!-- Bootstrap core CSS -->
-        <link href="/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-        
-        <!-- Bootstrap Optional thene -->
-        <link rel="stylesheet" href="/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-    </head>
-    <body>
-        <div class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand">{{ site.name }}</a>
-            </div>
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <!--        <link rel="stylesheet" href="/css/main.css">-->
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Optional thene -->
+    <!--            <link rel="stylesheet" href="/bootstrap/3.1.1/css/bootstrap-theme.min.css">-->
+</head>
+
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#heading-navbar-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="nav navbar-brand">{{ site.name }}</a>
+        </div>
+        <div class="collapse navbar-collapse" id="heading-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                <li>
+                    <a href="/blog/">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
+                </li>
+                <li>
+                    <a href="#">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="list-group">
+                <li>
+                    &nbsp
+                    <span class="glyphicon glyphicon-user"></span>&nbspJames Kim
+                </li>
+                <li>
+                    &nbsp
+                    <span class="glyphicon glyphicon-book"></span>&nbspCS Undergraduate at University of Maryland
+                </li>
+                <li>
+                    &nbsp
+                    <span class="glyphicon glyphicon-envelope"></span>&nbspjamwjam@gmail.com
+                </li>
+                <li>
+                    &nbsp
+                    <span class="glyphicon glyphicon-refresh"></span>
+                    <a href="http://github.com/jamwjam">github.com/jamwjam</a>
+                </li>
+            </ul>
         </div>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-            <a class="extra" href="/about/">about</a>
-            <a class="extra" href="/blog/">blog</a>
-          </div>
 
-          {{ content }}
-           
-          <!-- This block should be in your index.html -->
-          <div class="home">
- 
-          </div>
+    </div>
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                James Kim<br />
-                CS Undergraduate at University of Maryland<br />
-                jamwjam@gmail.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/jamwjam</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/jamwjam</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    </body>
+
+    <div class="jumbotron">
+        <h1>Lorem ipsum dolor.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, recusandae!</p>
+        <a href="#" class="btn btn-larger btn-info">Get Started</a>
+    </div>
+
+    <div class="site">
+
+        {{ content }}
+
+    </div>
+
+
+    <div id="footer">
+
+    </div>
+
+
+    <div class="nav navbar-inverse navbar-fixed-bottom">
+        &nbsp
+    </div>
+
+
+
+
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+
 </html>
