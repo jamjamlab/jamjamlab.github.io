@@ -8,9 +8,10 @@ categories: d3.js
 To start off I felt I needed more pjazz on the main page of my website.
 <br/>
 In addition, its a good first step for me due to several reasons:
-1. Learn to utilize d3.js - d3 will come very handy later for visualizing data and on-the-go svg graphics
-2. Make my website more pretty
-3. It's fun
+<br/>
+* Learn to utilize d3.js - d3 will come very handy later for visualizing data and on-the-go svg graphics
+* Make my website more pretty
+* It's fun
 
 <br/>
 Something that catches the eye of readers! Something that symbolizeds my interst in networking new people... So a wifi symbol. 
