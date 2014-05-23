@@ -31,8 +31,8 @@ For the sake of simplicity, instead of downloading the components and setting up
 Here's what your html should look like in order to utilize d3.js.
 You'll need to include two things. 
 
- * The d3 library, done through "<script charset="utf-8" src="js/d3.min.js"></script>" inside the `<head>` 
- * jQuery library, done through "<script src="js/jquery-2.1.0.min.js"></script>" inside the `<body>` 
+ * The d3 library, done through [script charset="utf-8" src="js/d3.min.js"] inside the `<head>` 
+ * jQuery library, done through [script src="js/jquery-2.1.0.min.js"] inside the `<body>` 
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -63,7 +63,30 @@ This is how innerds of my `<body>` tag should look like:
 </body>
 {% endhighlight html %}
 
+{% highlight js %}
+var svg = d3.select("#wifi").append("svg")
+    .attr("width", 200)
+    .attr("height", 200);
+{% endhighlight js %}
 
+## Step 4: Defining and appending the shape
+{% highlight js %}
+var svg = d3.select("#wifi").append("svg")
+    .attr("width", 200)
+    .attr("height", 200);
+
+var arc = d3.svg.arc()
+    .innerRadius(80)
+    .outerRadius(100)
+    .startAngle(-1/2 * Math.PI) 
+    .endAngle(1/2 * Math.PI);
+
+svg.append("path")
+    .attr("d", arc)
+    .attr("transform", "translate(100,100)");
+{% endhighlight js %}
+
+## Step 5: Making concentric circles
 {% highlight js %}
 var dataset = [0, 1, 2, 3, 4];
 var arc = d3.svg.arc()
@@ -92,7 +115,3 @@ var arcs = svg.append("path")
     })
     .attr("d", arc);
 {% endhighlight js %}
-
-## Step 4: Adding the shapes
-
-## Step 5: Making concentric circles
