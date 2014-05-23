@@ -11,8 +11,7 @@ In addition, its a good first step for me due to several reasons:
 
  * Learn to utilize d3.js - d3 will come very handy later for visualizing data and on-the-go svg graphics
  * Make my website more pretty
- 
-* It's fun
+ * It's fun
 
 Something that catches the eye of readers! Something that symbolizeds my interst in networking new people... So a wifi symbol. 
 
