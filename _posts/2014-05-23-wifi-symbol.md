@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lets make shapes using d3.js!"
-date:   2014-05-19 23:33:10
+date:   2014-05-23 14:33:10
 categories: d3.js
 ---
 
@@ -23,6 +23,72 @@ To begin with I started with skeches; I guess I didn't need this step after all,
 
 <img src="http://i.imgur.com/l4g6V3T.jpg" class="img-responsive" alt="Responsive image">
 
+But you get the idea. I will be going for somthing very minimal and universal.
 
-But you get the idea. I will be going for somthing very minimal and universal
+## Step 2: download d3.js and required components 
 
+You can download d3.js here: 
+
+
+## Step 3: 
+
+{% highlight js %}
+    var dataset = [0, 1, 2, 3, 4];
+
+    var arc = d3.svg.arc()
+        .innerRadius(function(d) {
+            return d * 30;
+        })
+        .outerRadius(function(d) {
+            return (d * 30 + 20);
+        })
+        .startAngle(-1 / 4 * Math.PI)
+        .endAngle(1 / 4 * Math.PI);
+
+    var svg = d3.select("#wifi").append("svg")
+        .attr("width", 280)
+        .attr("height", 140)
+        .selectAll("g")
+        .data(dataset)
+        .enter()
+        .append("g")
+        .attr("transform", "translate(140,140)");
+
+    var arcs = svg.append("path")
+        .attr("fill", "#ce96de")
+        .attr("id", function(d, i) {
+            return "s" + i;
+        })
+        .attr("d", arc);
+{% endhighlight %}
+
+{# highlight js #}
+ 
+    var dataset = [0, 1, 2, 3, 4];
+
+    var arc = d3.svg.arc()
+        .innerRadius(function(d) {
+            return d * 30;
+        })
+        .outerRadius(function(d) {
+            return (d * 30 + 20);
+        })
+        .startAngle(-1 / 4 * Math.PI)
+        .endAngle(1 / 4 * Math.PI);
+
+    var svg = d3.select("#wifi").append("svg")
+        .attr("width", 280)
+        .attr("height", 140)
+        .selectAll("g")
+        .data(dataset)
+        .enter()
+        .append("g")
+        .attr("transform", "translate(140,140)");
+
+    var arcs = svg.append("path")
+        .attr("fill", "#ce96de")
+        .attr("id", function(d, i) {
+            return "s" + i;
+        })
+        .attr("d", arc);
+{# endhighlight #}
