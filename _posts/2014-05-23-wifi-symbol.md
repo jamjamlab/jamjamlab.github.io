@@ -2,7 +2,7 @@
 layout: post
 title:  "Lets make shapes using d3.js!"
 date:   2014-05-23 14:33:10
-categories: [d3.js, tutorial]
+categories: d3.js
 ---
 
 To start off I felt I needed more pjazz on the main page of my website.
@@ -91,7 +91,8 @@ var arcs = svg.append("path")
         return "s" + i;
     })
     .attr("d", arc);
-{% endhighlight js %}    
+{% endhighlight js %}
+
 ## Step 4: Adding the shapes
 
 ## Step 5: Making concentric circles
