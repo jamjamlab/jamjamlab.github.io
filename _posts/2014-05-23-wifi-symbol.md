@@ -33,62 +33,9 @@ You can download d3.js here:
 ## Step 3: 
 
 {% highlight js %}
-    var dataset = [0, 1, 2, 3, 4];
-
-    var arc = d3.svg.arc()
-        .innerRadius(function(d) {
-            return d * 30;
-        })
-        .outerRadius(function(d) {
-            return (d * 30 + 20);
-        })
-        .startAngle(-1 / 4 * Math.PI)
-        .endAngle(1 / 4 * Math.PI);
-
-    var svg = d3.select("#wifi").append("svg")
-        .attr("width", 280)
-        .attr("height", 140)
-        .selectAll("g")
-        .data(dataset)
-        .enter()
-        .append("g")
-        .attr("transform", "translate(140,140)");
-
-    var arcs = svg.append("path")
-        .attr("fill", "#ce96de")
-        .attr("id", function(d, i) {
-            return "s" + i;
-        })
-        .attr("d", arc);
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
-
-{# highlight js #}
- 
-    var dataset = [0, 1, 2, 3, 4];
-
-    var arc = d3.svg.arc()
-        .innerRadius(function(d) {
-            return d * 30;
-        })
-        .outerRadius(function(d) {
-            return (d * 30 + 20);
-        })
-        .startAngle(-1 / 4 * Math.PI)
-        .endAngle(1 / 4 * Math.PI);
-
-    var svg = d3.select("#wifi").append("svg")
-        .attr("width", 280)
-        .attr("height", 140)
-        .selectAll("g")
-        .data(dataset)
-        .enter()
-        .append("g")
-        .attr("transform", "translate(140,140)");
-
-    var arcs = svg.append("path")
-        .attr("fill", "#ce96de")
-        .attr("id", function(d, i) {
-            return "s" + i;
-        })
-        .attr("d", arc);
-{# endhighlight #}
