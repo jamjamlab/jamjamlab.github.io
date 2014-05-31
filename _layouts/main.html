@@ -33,6 +33,11 @@
         .white a {
             color: #fff;
         }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -68,16 +73,13 @@
             </ul>
         </div>
     </div>
-    <br/>
-    {{ content }}
-    
-    <footer>
-        <div class="navbar navbar-inverse navbar-fixed-bottom">
+    <br/>{{ content }}
 
+    <footer>
+        <div class="navbar navbar-inverse">
             <ul class="nav navbar-nav">
 
                 <li>
-
                     <a href="#">
                         &nbsp
                         <span class="glyphicon glyphicon-user"></span>&nbspJames Kim</a>
@@ -100,7 +102,6 @@
                         github.com/jamwjam</a>
                 </li>
             </ul>
-
         </div>
     </footer>
 
