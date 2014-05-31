@@ -29,79 +29,81 @@
         body {
             background-color: #b1a9c4;
         }
-    
+        .white,
+        .white a {
+            color: #fff;
+        }
     </style>
 </head>
 
 <body>
 
-
-
-
+    <div class="navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#heading-navbar-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="nav navbar-brand">{{ site.name }}</a>
+        </div>
+        <div class="collapse navbar-collapse" id="heading-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="http://jamwjam.github.io/">Home</a>
+                </li>
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                <li>
+                    <a href="/blog/">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
+                </li>
+                <li>
+                    <a href="#">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     &nbsp
-    <div class="container">
-        <div class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#heading-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="#" class="nav navbar-brand">{{ site.name }}</a>
-            </div>
-            <div class="collapse navbar-collapse" id="heading-navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="http://jamwjam.github.io/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about/">About</a>
-                    </li>
-                    <li>
-                        <a href="/blog/">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#">Gallery</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-        <div class="jumbotron">
-            {{ content }}
-
-        </div>
-
-
+    <div class="jumbotron">
+        {{ content }}
 
     </div>
 
-    <div class="container">
-        <div class="well">
 
-            <h4>Contact Information</h4>
-            &nbsp
-            <span class="glyphicon glyphicon-user"></span>&nbspJames Kim
 
-            <br>&nbsp
-            <span class="glyphicon glyphicon-book"></span>&nbspUMD CS Undergraduate
-            <br>&nbsp
-            <span class="glyphicon glyphicon-envelope"></span>&nbspjamwjam@gmail.com
-            <br>&nbsp
-            <span class="glyphicon glyphicon-refresh"></span>
-            <a href="http://github.com/jamwjam">github.com/jamwjam</a>
+    <footer>
+        <div class="navbar navbar-inverse navbar-fixed-bottom">
+
+            <ul class="nav navbar-nav">
+                <li>
+                    
+                    <a href="#">
+                        
+                        <span class="glyphicon glyphicon-user"></span>&nbspJames Kim</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-book"></span>&nbspUniversity of Maryland</a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-envelope"></span>&nbspjamwjam@gmail.com</a>
+                </li>
+                <li>
+                    <a href="http://github.com/jamwjam">
+                        <span class="glyphicon glyphicon-refresh"></span>
+                        github.com/jamwjam</a>
+                </li>
+            </ul>
+
         </div>
-    </div>
-
-    &nbsp
-    <div class="nav navbar-inverse navbar-fixed-bottom">
-        &nbsp
-    </div>
+    </footer>
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
