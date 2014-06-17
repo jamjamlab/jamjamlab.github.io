@@ -1,0 +1,16 @@
+.shape, #circle {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black; }
+
+#circle {
+  position: fixed;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+
+#circle:hover {
+  left: 20px;
+  background-color: yellow; }

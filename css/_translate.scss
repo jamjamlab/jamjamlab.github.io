@@ -1,0 +1,20 @@
+@import 'shape';
+
+@mixin translate($second, $easing_function) {
+    -webkit-transition: all $second $easing_function;
+    -moz-transition: all $second $easing_function;
+    -o-transition: all $second $easing_function;
+    transition: all $second $easing_function;
+}
+
+#circle {
+    position: fixed;
+    border-radius: 50% 50% 50% 50%;
+    @extend .shape;
+    @include translate(1s, ease-in-out);   
+}
+
+#circle:hover {
+    left:20px;
+    background-color: yellow;
+}
