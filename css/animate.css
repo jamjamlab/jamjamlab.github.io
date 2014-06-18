@@ -1,16 +1,101 @@
-.shape, #circle {
+.shape, .circle, #circle, .rectangle, #rectangle, #normal, .canvas, .block {
+  position: relative;
   width: 100px;
   height: 100px;
   border: 1px solid black; }
 
+.circle, #circle {
+  border-radius: 50% 50% 50% 50%; }
+
+.rectangle, #rectangle, #normal, .canvas, .block {
+  width: 100px;
+  height: 100px; }
+
 #circle {
-  position: fixed;
-  border-radius: 50% 50% 50% 50%;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out; }
+  left: 0px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out; }
 
 #circle:hover {
   left: 20px;
   background-color: yellow; }
+
+#rectangle {
+  left: 0px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; }
+
+#rectangle:hover {
+  left: 20px;
+  background-color: blue; }
+
+#normal {
+  left: 0px;
+  top: 0px;
+  -webkit-transition-property: left, top;
+  -moz-transition-property: left, top;
+  -o-transition-property: left, top;
+  transition-property: left, top;
+  -webkit-transition-duration: 0.2s, 0.2s;
+  -moz-transition-duration: 0.2s, 0.2s;
+  -o-transition-duration: 0.2s, 0.2s;
+  transition-duration: 0.2s, 0.2s;
+  -webkit-transition-delay: 0s, 0.2s;
+  -moz-transition-delay: 0s, 0.2s;
+  -o-transition-delay: 0s, 0.2s;
+  transition-delay: 0s, 0.2s; }
+
+#normal:hover {
+  left: 20px;
+  top: 20px; }
+
+.shape, .circle, #circle, .rectangle, #rectangle, #normal, .canvas, .block {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black; }
+
+.circle, #circle {
+  border-radius: 50% 50% 50% 50%; }
+
+.rectangle, #rectangle, #normal, .canvas, .block {
+  width: 100px;
+  height: 100px; }
+
+#skew {
+  -webkit-transform: skew(5deg);
+  -moz-transform: skew(5deg);
+  -o-transform: skew(5deg);
+  transform: skew(5deg); }
+
+#rotate {
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  transform: rotate(5deg); }
+
+#scale {
+  -webkit-transform: scale(1, 0.5);
+  -moz-transform: scale(1, 0.5);
+  -o-transform: scale(1, 0.5);
+  transform: scale(1, 0.5); }
+
+#translate {
+  -webkit-transform: translate(10px, 20px);
+  -moz-transform: translate(10px, 20px);
+  -o-transform: translate(10px, 20px);
+  transform: translate(10px, 20px); }
+
+.canvas {
+  padding: 10px;
+  width: 80%;
+  min-height: 300px;
+  margin: 0 auto; }
+
+.block {
+  margin: 10px;
+  display: inline-block; }
