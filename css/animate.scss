@@ -1,5 +1,6 @@
 @import 'translate';
 @import 'transform';
+@import 'keyframe';
 
 $h:300px;
 $w:80%;
@@ -16,4 +17,5 @@ $w:80%;
     @extend .rectangle;
     margin: 10px;
     display: inline-block;
+    background-color: red;
 }

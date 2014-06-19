@@ -90,6 +90,21 @@
   -o-transform: translate(10px, 20px);
   transform: translate(10px, 20px); }
 
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+#pulsate {
+  -webkit-animation: pulsate 0.5s 0 infinite alternate ease-in;
+  -moz-animation: pulsate 0.5s 0 infinite alternate ease-in;
+  -o-animation: pulsate 0.5s 0 infinite alternate ease-in;
+  animation: pulsate 0.5s 0 infinite alternate ease-in; }
+
 .canvas {
   padding: 10px;
   width: 80%;
@@ -98,4 +113,5 @@
 
 .block {
   margin: 10px;
-  display: inline-block; }
+  display: inline-block;
+  background-color: red; }
