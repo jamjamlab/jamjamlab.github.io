@@ -1,24 +1,24 @@
-//@import 'translate';
+@import 'translate';
 @import 'transform';
 @import 'keyframe';
 
-//$h:300px;
-//$w:80%;
-//
-//.canvas {
-//    @extend .rectangle;
-//    padding: 10px;
-//    width: $w;
-//    min-height: 300px;
-//    margin: 0 auto;
-//}
-//
-//.block {
-//    @extend .rectangle;
-//    margin: 10px;
-//    display: inline-block;
-//    background-color: red;
-//}
+$h:300px;
+$w:80%;
+
+.canvas {
+    @extend .rectangle;
+    padding: 10px;
+    width: $w;
+    min-height: 300px;
+    margin: 0 auto;
+}
+
+.block {
+    @extend .rectangle;
+    margin: 10px;
+    display: inline-block;
+    background-color: red;
+}
 
 #content {
     position: relative;
