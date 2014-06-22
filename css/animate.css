@@ -135,10 +135,10 @@
   -moz-transform: rotate(-20deg);
   -o-transform: rotate(-20deg);
   transform: rotate(-20deg);
-  -webkit-animation: slide_right 1.5s 0.5s infinite normal ease-out;
-  -moz-animation: slide_right 1.5s 0.5s infinite normal ease-out;
-  -o-animation: slide_right 1.5s 0.5s infinite normal ease-out;
-  animation: slide_right 1.5s 0.5s infinite normal ease-out;
+  -webkit-animation: slide_right 1.5s 0.5s 1 normal ease-out;
+  -moz-animation: slide_right 1.5s 0.5s 1 normal ease-out;
+  -o-animation: slide_right 1.5s 0.5s 1 normal ease-out;
+  animation: slide_right 1.5s 0.5s 1 normal ease-out;
   -webkit-animation-fill-mode: forwards; }
 
 #frame {
