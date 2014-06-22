@@ -123,23 +123,47 @@
   display: inline-block;
   background-color: red; }
 
-#content {
+#content, #label_1, #label_2, #label_3 {
   opacity: 0;
   position: relative;
   font-size: 100px;
   font-style: italic;
   font-weight: bold;
   font-family: helvetica;
-  text-align: center;
   color: white;
+  text-align: center;
   -webkit-transform: rotate(-20deg);
   -moz-transform: rotate(-20deg);
   -o-transform: rotate(-20deg);
   transform: rotate(-20deg);
+  text-shadow: 2px 2px 1px black; }
+
+#content, #label_1, #label_2, #label_3 {
   -webkit-animation: slide_right 1.5s 0.5s 1 normal ease-out;
   -moz-animation: slide_right 1.5s 0.5s 1 normal ease-out;
   -o-animation: slide_right 1.5s 0.5s 1 normal ease-out;
   animation: slide_right 1.5s 0.5s 1 normal ease-out;
+  -webkit-animation-fill-mode: forwards; }
+
+#label_1 {
+  -webkit-animation: slide_right 1.5s 0.8s 1 normal ease-out;
+  -moz-animation: slide_right 1.5s 0.8s 1 normal ease-out;
+  -o-animation: slide_right 1.5s 0.8s 1 normal ease-out;
+  animation: slide_right 1.5s 0.8s 1 normal ease-out;
+  -webkit-animation-fill-mode: forwards; }
+
+#label_2 {
+  -webkit-animation: slide_right 1.5s 1s 1 normal ease-out;
+  -moz-animation: slide_right 1.5s 1s 1 normal ease-out;
+  -o-animation: slide_right 1.5s 1s 1 normal ease-out;
+  animation: slide_right 1.5s 1s 1 normal ease-out;
+  -webkit-animation-fill-mode: forwards; }
+
+#label_3 {
+  -webkit-animation: slide_right 1.5s 1.2s 1 normal ease-out;
+  -moz-animation: slide_right 1.5s 1.2s 1 normal ease-out;
+  -o-animation: slide_right 1.5s 1.2s 1 normal ease-out;
+  animation: slide_right 1.5s 1.2s 1 normal ease-out;
   -webkit-animation-fill-mode: forwards; }
 
 #frame {
@@ -147,3 +171,7 @@
   width: 100%;
   background: url("http://i.imgur.com/lkF42u1.jpg");
   background-position: center; }
+
+#label_1, #label_2, #label_3 {
+  font-size: 50px;
+  color: white; }
