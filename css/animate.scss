@@ -5,6 +5,8 @@
 $h:300px;
 $w:80%;
 
+@include keyframes_slide_right();
+
 .canvas {
     @extend .rectangle;
     padding: 10px;
