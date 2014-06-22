@@ -34,3 +34,10 @@ $w:80%;
     @include rotate(-20deg);
     @include keyframe(slide_right, 1.5s, .5s, infinite, normal, ease-out, forwards);
 }
+
+#frame {
+    height: 600px;
+    width: 100%;
+    background: url("http://i.imgur.com/lkF42u1.jpg");
+    background-position: center;
+}

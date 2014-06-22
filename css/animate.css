@@ -127,3 +127,9 @@
   -o-animation: slide_right 1.5s 0.5s infinite normal ease-out;
   animation: slide_right 1.5s 0.5s infinite normal ease-out;
   -webkit-animation-fill-mode: forwards; }
+
+#frame {
+  height: 600px;
+  width: 100%;
+  background: url("http://i.imgur.com/lkF42u1.jpg");
+  background-position: center; }
