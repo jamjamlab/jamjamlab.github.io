@@ -1,21 +1,36 @@
-@import 'translate';
+//@import 'translate';
 @import 'transform';
 @import 'keyframe';
 
-$h:300px;
-$w:80%;
+//$h:300px;
+//$w:80%;
+//
+//.canvas {
+//    @extend .rectangle;
+//    padding: 10px;
+//    width: $w;
+//    min-height: 300px;
+//    margin: 0 auto;
+//}
+//
+//.block {
+//    @extend .rectangle;
+//    margin: 10px;
+//    display: inline-block;
+//    background-color: red;
+//}
 
-.canvas {
-    @extend .rectangle;
-    padding: 10px;
-    width: $w;
-    min-height: 300px;
-    margin: 0 auto;
-}
-
-.block {
-    @extend .rectangle;
-    margin: 10px;
-    display: inline-block;
-    background-color: red;
+#content {
+    position: relative;
+    
+    font-size: 100px;  
+    font-style: italic;
+    font-weight:bold;
+    font-family:helvetica;
+   
+    text-align: center;
+    color:white; 
+    
+    @include rotate(-20deg);
+    @include keyframe(slide_right, 1.5s, .5s, infinite, normal, ease-out, forwards);
 }
