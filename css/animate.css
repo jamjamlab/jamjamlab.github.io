@@ -168,7 +168,7 @@
   -webkit-animation-fill-mode: forwards; }
 
 #frame {
-  height: 600px;
+  height: 510px;
   width: 100%;
 min-width: 500px;
 /*  background: url("http://i.imgur.com/lkF42u1.jpg");*/
@@ -178,3 +178,5 @@ min-width: 500px;
 #label_1, #label_2, #label_3 {
   font-size: 50px;
   color: white; }
+
+
