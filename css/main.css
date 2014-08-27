@@ -12,7 +12,6 @@
 
 html, body { height: 100%; }
 
-
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
@@ -86,8 +85,9 @@ a:visited { color: #a0a; }
 }
 
 .footer {
+  height: 300px;
   font-size: 80%;
-  color: #666;
+  background-color: #222222;
   border-top: 4px solid #eee;
   margin-top: 2em;
   overflow: hidden;
@@ -150,12 +150,5 @@ a:visited { color: #a0a; }
   background-color: #333;
 }
 
-footer {
-    
-}
 
-.footer {
-    background-color: black;
-    height: 100px;
-    width: 50
-}
+
