@@ -13,8 +13,7 @@ In addition, its a good first step for me due to several reasons:
  * Make my website more pretty
  * It's fun!
 
-I wanted something that catches the eye of readers! Something that symbolizeds my interst in networking new people... 
-
+I wanted something that catches the eye of readers!
 Here's the list of step I took to make this symbol a reality.
 
 ## Step 1: Drawing it out
