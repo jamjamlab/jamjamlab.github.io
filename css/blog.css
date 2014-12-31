@@ -330,7 +330,7 @@ ul li input[type=checkbox]:checked ~ i:after {
   }
 }
 h1 {
-  color: #ff6873;
+/*  color: #ff6873;*/
 }
 
 h1 {
@@ -355,7 +355,8 @@ img {
   width: 100%;
 }
 
+/*
 li > p {
   border-left: 1px dotted #bec9cd;
   padding: 10px;
-}
+}*/
