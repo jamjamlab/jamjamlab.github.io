@@ -56,17 +56,17 @@ body {
 */
 
 p {
-  color: rgba(48, 69, 92, 0.8);
-  font-size: 17px;
-  line-height: 26px;
-  letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
+/*  color: rgba(48, 69, 92, 0.8);*/
+/*  font-size: 17px;*/
+/*  line-height: 26px;*/
+/*  letter-spacing: 1px;*/
+/*  position: relative;*/
+/*  overflow: hidden;*/
   max-height: 8000px;
-  opacity: 1;
+/*  opacity: 1;*/
   transform: translate(0, 0);
-  margin-top: 14px;
-  z-index: 2;
+/*  margin-top: 14px;*/
+/*  z-index: 2;*/
 }
 
 ul {
@@ -330,7 +330,7 @@ ul li input[type=checkbox]:checked ~ i:after {
   }
 }
 h1 {
-  color: #ff6873;
+/*  color: #ff6873;*/
 }
 
 h1 {
