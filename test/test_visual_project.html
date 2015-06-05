@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
     <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- main css-->
@@ -24,7 +24,14 @@
 
     <!--    <link rel="stylesheet" href="http://codepen.io/jamwjam/pen/myOEKv.css">-->
 
-   <style>
+    <style>
+        h1,
+        h2,
+        h3,
+        p {
+            font-family: helvetica;
+        }
+        
         @-webkit-keyframes slide_right {
             0% {
                 opacity: 0;
@@ -97,8 +104,8 @@
             font-size: 50px;
             font-family: helvetica;
             color: #1f1f1f;
-            text-align: center;1
-            -webkit-transform: rotate(-20deg);
+            text-align: center;
+            1 -webkit-transform: rotate(-20deg);
             -moz-transform: rotate(-20deg);
             -o-transform: rotate(-20deg);
             transform: rotate(-20deg);
@@ -120,7 +127,7 @@
         }
         
         body {
-            background: rgb(255, 255, 255);    
+            background: rgb(255, 255, 255);
         }
         
         #frame > div {
@@ -186,8 +193,37 @@
             -ms-animation-fill-mode: forwards;
             -o-animation-fill-mode: forwards;
         }
+        
+        .footer-buffer {
+            height: 100px;
+            background: -webkit-linear-gradient(top, white, #1f1f1f);
+            /* For Safari 5.1 to 6.0 */
+        }
+        
+        .footer-main {
+            background: #1f1f1f;
+        }
+        
+        .white {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .white > a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .block {
+            display: inline-block;
+            width: 400px;
+        }
+        
+        .d3 > .chart {
+            text-align: center;
+        }
     </style>
- 
+
 </head>
 
 <body>
@@ -209,7 +245,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h1><span><i class="fa fa-picture-o"></i></span> Background</h1>
+                <h1><span><i class="fa fa-info-circle "></i></span> About</h1>
                 <hr>
                 <p>Welcome to my portfolio. I'm Jung Kim (call me James), a Computer Science undergraduate and a senior at University of Maryland, College Park.</p>
                 <p><a href="https://drive.google.com/file/d/0B_RX8ykIqo8LTTJ1dmp0ODN3ckk/edit?usp=sharing"><span><i class="fa fa-file-o fa-2x"></i></span>&nbsp; Resume</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://codepen.io/jamwjam/"><span><i class="fa fa-codepen fa-2x"></i></span>&nbsp; Codepen Portfolio</a>
@@ -219,7 +255,7 @@
                 <p>In my case, this portfolio reveals the validity to the words that I put into my resume - to prove the readers that I really can do things!</p>
                 <h3>Implementation</h3>
                 <p>This website is happily and skillfully hand-crafted by James! Web-design and development, since beginning of college I've always thought it would be cool to have an online-portfolio of my own.</p>
-                <p>It's built in pure HTML &amp; CSS, and in order to create this website and publish into the web, I used several useful (and awesome) technologies.</p>
+                <p>It's built with a little bit of HTML, CSS, a bit of Javascript, and in order to create this website and publish into the web, I used several useful (and awesome) technologies.</p>
                 <ul>
                     <li><a href="https://www.pages.github.com">GitHub Pages</a> - Allows users of GitHub to host their own webpage</li>
                     <li><a href="http://www.jekyllrb.com">Jekyll</a> - Static site generator</li>
@@ -233,39 +269,270 @@
                 <hr>
                 <p>There are exciting technologies out there for me to learn and explore! While not always, and when I'm not tired, I like to research, tweak, and implement things that fasinates me. </p>
                 <h3>Big Data</h3>
-                <p>My second internship exposed me to the world of Big Data and it has been a special portion in my topic of interest ever since.
-                    <p/>
-                    <p>As a team contributor surrounded with developers and problem solvers, I enjoyed learning, as well as experiening my time handling very large data sets, working with intriguing tasks including: data mining and querying Hadoop, researching ad-hoc querying tools over HBase and providing documentations for others to follow.</p>
-                    <h3>Website Design</h3>
-                    <p>I have been interested in website development and design ever since I found out building one was well within my capabilities! </p>
-                    <p>Another driving motivation for makeing website is that most tools I've used did not cost anything at all! These materials either have free-tier plans or were open source.</p>
-                    <h3>Android Development</h3>
-                    <p>One of my main ambition of starting out mobile development was the fact that I could distribute my work everywhere through publishing them through an app store. </p>
-                    <p>My foundation and background in utilizing C#, .NET as well as Visual Studio was introduced and refined all thanks to me tinkering around with Windows Phone 7 Development which I started 2 years ago.</p>
-                    <p>Today, my experience in mobile development is getting more and more useful. Currently, I'm taking Human Computer Interactions in UMD, where one of the big project is a semester long sensor-focused mobile app development!</p>
+                <p>As a team contributor surrounded with developers and problem solvers, I enjoyed learning, as well as experiening my time handling very large data sets, working with intriguing tasks including: data mining and querying Hadoop, researching ad-hoc querying tools over HBase and providing documentations for others to follow.</p>
+                <h3>Website Design</h3>
+                <p>I have been interested in website development and design ever since I found out building one was well within my capabilities! </p>
+                <p>Another driving motivation for makeing website is that most tools I've used did not cost anything at all! These materials either have free-tier plans or were open source.</p>
+                <h3>Android Development</h3>
+                <p>My interests in mobile development originated in my freshmen year in UMD College Park. At first, I began to tinker around with Windows Phone 7 development. This then established my background in C#, Visual Studio and soon enough, ultimately transitioned into Android development.</p>
+                <p>Today, my experience in mobile development is getting ever more useful. Take for intance, the Human Computer Interaction course in UMD. Knowledge in this field helped my big time as our semester long project was building a sensor-focused mobile application!</p>
             </div>
             <div class="col-md-4">
-                <h1><span><i class="fa fa-link"></i></span> Network</h1>
-                <hr>If you have any questions about me, feel free to connect by utilizing the following networks below.
-                <br>
-                <br>
-                <p><span><i class="fa fa-envelope-o fa-2x"></i></span>&nbsp; jamwjam@gmail.com</p>
-                <p><a href="https://github.com/jamwjam"><span><i class="fa fa-github-alt fa-2x"></i></span>&nbsp; github.com/jamwjam</a>
-                </p>
-                <p><a href="http://www.linkedin.com/in/jamwjam"><span><i class="fa fa-linkedin fa-2x"></i></span>&nbsp; linkedin.com/in/jamwjam</a>
-                </p>
+                <h1><span><i class="fa fa-pie-chart"></i></span> Statistics</h1>
+                <hr>
+                <p>Here are some fancy charts I made with the help of <a href="http://d3js.org/">D3.js</a> JavaScript library.</p> 
+                <div class="d3">
+                    <h3>GitHub Repo Composition</h3>
+                    <div class="chart" id="github_chart"></div>
+                    <h3>GitHub Gist Composition</h3>
+                    <div class="chart" id="gist_chart"></div>
+                </div>
+                <p>Here's the deal (<span style="font-weight:bold">disclaimer!</span>): The following charts above does not solely reflect my programming expertise and/or language knowledgebase.</p>
+                <p>But it sure looks cool!</p>
             </div>
         </div>
     </div>
     <br>
-    <br>
-    <br>
     <footer>
+        <div class="footer-main">
+            <br>
+            <br>
+            <div class="container">
+                <div class="row white">
+                    <div class="col-sm-4">
+                        <h1><span><i class="fa fa-link"></i></span> Network</h1> If you have any questions about me, feel free to connect by utilizing the following networks below.
+                        <br>
+                        <br>
+                        <p><span><i class="fa fa-envelope-o fa-2x"></i></span>&nbsp; jamwjam@gmail.com</p>
+                        <p><a style="color:inherit" href="https://github.com/jamwjam"><span><i class="fa fa-github-alt fa-2x"></i></span>&nbsp; github.com/jamwjam</a>
+                        </p>
+                        <p><a style="color:inherit" href="http://www.linkedin.com/in/jamwjam"><span><i class="fa fa-linkedin fa-2x"></i></span>&nbsp; linkedin.com/in/jamwjam</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
     </footer>
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="http://codepen.io/jamwjam/pen/XJNJWZ.js"></script>
+    <!--    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script>
+        var github_data = {};
+        var gist_data = {};
+        var count = 0;
+        var stat_length;
+
+        get_repos();
+        get_gists();
+
+        function get_repos() {
+            $.getJSON("https://api.github.com/users/jamwjam/repos", function (result) {
+                stat_length = result.length;
+                for (i in result) {
+                    $.ajax({
+                        type: "GET",
+                        url: result[i].languages_url,
+                        dataType: "json",
+                        success: function (result) {
+                            handle_stats("#github_chart", result);
+                        }
+                    });
+                }
+            });
+        }
+
+        function get_gists() {
+            var language, size;
+            $.getJSON("https://api.github.com/users/jamwjam/gists", function (result) {
+                for (i in result) {
+                    for (f in result[i].files) {
+                        language = result[i].files[f].language;
+                        size = result[i].files[f].size;
+
+                        if (language == null) {
+                            language = "PlainText";
+                        }
+
+                        if (gist_data[language] == null)
+                            gist_data[language] = size;
+                        else
+                            gist_data[language] += size;
+                    }
+                }
+
+                render_pie_chart("#gist_chart", gist_data);
+            });
+        }
+
+
+        function handle_stats(id, result) {
+            for (key in result)
+                if (github_data[key] == null)
+                    github_data[key] = result[key];
+                else
+                    github_data[key] += result[key];
+
+            if (count == stat_length - 1) {
+                render_pie_chart(id, github_data);
+            }
+
+            count++;
+        }
+
+        function render_pie_chart(id, data) {
+            var data = format_data(data);
+
+            var color = d3.scale.category20c();
+
+            var width = 240,
+                height = 240,
+                radius = 120;
+
+            var inner = 70;
+
+            var arc = d3.svg.arc()
+                .outerRadius(radius - 60)
+                .innerRadius(radius - 10);
+
+            var arcOver = d3.svg.arc()
+                .innerRadius(radius - 60)
+                .outerRadius(radius);
+
+
+            var total = d3.sum(data, function (d) {
+                return d3.sum(d3.values(d));
+            });
+
+
+            var svg = d3.select(id).append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+            var textTop = svg.append("text")
+                .attr("dy", ".35em")
+                .style("text-anchor", "middle")
+                .attr("class", "textTop")
+                .attr("y", -25);
+            
+            var textMiddle = svg.append("text")
+                .attr("dy", ".35em")
+                .style("text-anchor", "middle")
+                .attr("class", "textMiddle")
+                .text("Total")
+                .attr("y", -5);
+
+            var textBottom = svg.append("text")
+                .attr("dy", ".35em")
+                .style("text-anchor", "middle")
+                .attr("class", "textBottom")
+                .text((total / 1024).toFixed(2) + " kB")
+                .attr("y", 15);
+
+            var pie = d3.layout.pie()
+                .sort(null)
+                .value(function (d) {
+                    return d.value;
+                });
+
+            var g = svg.selectAll(".arc")
+                .data(pie(data))
+                .enter().append("g")
+                .attr("class", "arc")
+                .on("mouseover", function (d) {
+                    d3.select(this).select("path").transition()
+                        .duration(200)
+                        .attr("d", arcOver)
+                    textTop.text(((d3.select(this).datum().data.value / total) * 100).toFixed(2) + "%")
+                        .attr("y", -25);
+                    textMiddle.text(d3.select(this).datum().data.name)
+                        .attr("y", -5);
+                    textBottom.text((d3.select(this).datum().data.value / 1024).toFixed(2) + " kB")
+                        .attr("y", 15);
+                })
+                .on("mouseout", function (d) {
+                    d3.select(this).select("path").transition()
+                        .duration(100)
+                        .attr("d", arc)
+                    textTop.text("100.0%");
+                    textMiddle.text("Total")
+                        .attr("y", -5);
+                    textBottom.text((total / 1024).toFixed(2) + " kB");
+                })
+
+            g.append("path")
+                .attr("d", arc)
+                .style("fill", function (d, i) {
+                    return color(i);
+                })
+                .transition()
+                .ease("exp-out")
+                .duration(2000)
+                .attrTween("d", tweenPie)
+
+            var legend = d3.select(id).append("svg")
+                .attr("class", "legend")
+                .attr("width", radius)
+                .attr("height", radius * 2)
+                .selectAll("g")
+                .data(data)
+                .enter().append("g")
+                .attr("transform", function (d, i) {
+                    return "translate(0," + i * 20 + ")";
+                });
+
+            legend.append("circle")
+                .attr("cx", 10)
+                .attr("cy", 10)
+                .attr("r", 7)
+                .style("fill", function (d, i) {
+                    return color(i);
+                });
+
+            legend.append("text")
+                .attr("x", 24)
+                .attr("y", 9)
+                .attr("dy", ".35em")
+                .text(function (d) {
+                    return d.name;
+                });
+
+            function tweenPie(b) {
+                b.innerRadius = 0;
+                var i = d3.interpolate({
+                    startAngle: 0,
+                    endAngle: 0
+                }, b);
+                return function (t) {
+                    return arc(i(t));
+                };
+            }
+
+        }
+
+        function format_data(data) {
+            var result = [];
+
+            for (i in data) {
+                result.push({
+                    'name': i,
+                    'value': data[i]
+                });
+            }
+            return result;
+        }
+
+        function log(string) {
+            console.log(string);
+        }
+    </script>
 </body>
 
 </html>
