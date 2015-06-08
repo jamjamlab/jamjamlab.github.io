@@ -7,239 +7,50 @@
     <title>I'm James</title>
     <meta name="viewport" content="width=device-width">
 
-    <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
-    <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
-    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <!-- cosmo bootstrap theme -->
     <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+
+    <!-- font-awesome-->
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- main css-->
     <link rel="stylesheet" href="/css/main.css">
-
-    <!-- d3.js-->
-    <!--<script charset="utf-8" src="js/d3.min.js"></script>-->
-    <script charset="utf-8" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
-
-    <!--    <link rel="stylesheet" href="http://codepen.io/jamwjam/pen/myOEKv.css">-->
+    <link rel="stylesheet" href="//cdpn.io/jamwjam/pen/XJNJWZ.css">
+    <link rel="stylesheet" href="//cdpn.io/jamwjam/pen/NqRbOr.css">
 
     <style>
-        h1,
-        h2,
-        h3,
-        p {
-            font-family: helvetica;
-        }
-        
-        @-webkit-keyframes slide_right {
-            0% {
-                opacity: 0;
-                left: -200px;
-                top: 72px;
-            }
-            50% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-                left: 0px;
-                top: 0px;
-            }
-        }
-        
-        @-moz-keyframes slide_right {
-            0% {
-                opacity: 0;
-                left: -200px;
-                top: 72px;
-            }
-            50% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-                left: 0px;
-                top: 0px;
-            }
-        }
-        
-        @-ms-keyframes slide_right {
-            0% {
-                opacity: 0;
-                left: -200px;
-                top: 72px;
-            }
-            50% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-                left: 0px;
-                top: 0px;
-            }
-        }
-        
-        @-o-keyframes slide_right {
-            0% {
-                opacity: 0;
-                left: -200px;
-                top: 72px;
-            }
-            50% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-                left: 0px;
-                top: 0px;
-            }
-        }
-        
-        .label {
-            opacity: 0;
-            position: relative;
-            font-style: italic;
-            font-weight: bold;
-            font-size: 50px;
-            font-family: helvetica;
-            color: #1f1f1f;
-            text-align: center;
-            1 -webkit-transform: rotate(-20deg);
-            -moz-transform: rotate(-20deg);
-            -o-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-        }
-        
-        #label_0 {
-            font-size: 100px;
-        }
-        
-        .container-fluid {
-            padding: 0px;
-            overflow: hidden;
-        }
-        
-        #frame {
-            height: 500px;
-            width: 100%;
-            padding-top: 120px;
-        }
-        
-        body {
-            background: rgb(255, 255, 255);
-        }
-        
-        #frame > div {
-            display: block;
-            padding: 4px;
-        }
-        
-        @media screen and (max-width: 480px) {
-            #label_0 {
-                font-size: 66.66667px;
-            }
-            #label_1,
-            #label_2,
-            #label_3 {
-                font-size: 33.33333px;
-            }
-            #frame {
-                padding-top: 48px;
-                height: 277.77778px;
-            }
-        }
-        
-        #label_0 {
-            -webkit-animation: slide_right 1.5s 0.5s 1 normal ease-out;
-            -moz-animation: slide_right 1.5s 0.5s 1 normal ease-out;
-            -ms-animation: slide_right 1.5s 0.5s 1 normal ease-out;
-            -o-animation: slide_right 1.5s 0.5s 1 normal ease-out;
-            -webkit-animation-fill-mode: forwards;
-            -moz-animation-fill-mode: forwards;
-            -ms-animation-fill-mode: forwards;
-            -o-animation-fill-mode: forwards;
-        }
-        
-        #label_1 {
-            -webkit-animation: slide_right 1.5s 0.7s 1 normal ease-out;
-            -moz-animation: slide_right 1.5s 0.7s 1 normal ease-out;
-            -ms-animation: slide_right 1.5s 0.7s 1 normal ease-out;
-            -o-animation: slide_right 1.5s 0.7s 1 normal ease-out;
-            -webkit-animation-fill-mode: forwards;
-            -moz-animation-fill-mode: forwards;
-            -ms-animation-fill-mode: forwards;
-            -o-animation-fill-mode: forwards;
-        }
-        
-        #label_2 {
-            -webkit-animation: slide_right 1.5s 0.9s 1 normal ease-out;
-            -moz-animation: slide_right 1.5s 0.9s 1 normal ease-out;
-            -ms-animation: slide_right 1.5s 0.9s 1 normal ease-out;
-            -o-animation: slide_right 1.5s 0.9s 1 normal ease-out;
-            -webkit-animation-fill-mode: forwards;
-            -moz-animation-fill-mode: forwards;
-            -ms-animation-fill-mode: forwards;
-            -o-animation-fill-mode: forwards;
-        }
-        
-        #label_3 {
-            -webkit-animation: slide_right 1.5s 1.1s 1 normal ease-out;
-            -moz-animation: slide_right 1.5s 1.1s 1 normal ease-out;
-            -ms-animation: slide_right 1.5s 1.1s 1 normal ease-out;
-            -o-animation: slide_right 1.5s 1.1s 1 normal ease-out;
-            -webkit-animation-fill-mode: forwards;
-            -moz-animation-fill-mode: forwards;
-            -ms-animation-fill-mode: forwards;
-            -o-animation-fill-mode: forwards;
-        }
-        
-        .footer-buffer {
-            height: 100px;
-            background: -webkit-linear-gradient(top, white, #1f1f1f);
-            /* For Safari 5.1 to 6.0 */
-        }
-        
         .footer-main {
             background: #1f1f1f;
         }
         
         .white {
-            color: white;
+            color: #AAAAAA;
             text-decoration: none;
-        }
-        
-        .white > a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .block {
-            display: inline-block;
-            width: 400px;
         }
         
         .d3 > .chart {
             text-align: center;
         }
     </style>
-
 </head>
 
 <body>
-    <div id="frame">
-        <div id="label_0" class="label">
-            I'm<span>James</span>!
+    <div class="container-fluid">
+        <div id="frame">
+            <div id="label_0" class="label">
+                I'm<span style="color:#1f1f1f">James</span>!
+            </div>
+            <div id="label_1" class="label">
+                Software Engineer
+            </div>
+            <div id="label_2" class="label">
+                Technical Writer
+            </div>
+            <div id="label_3" class="label">
+                Web Designer
+            </div>
         </div>
-        <div id="label_1" class="label">
-            Software Engineer
-        </div>
-        <div id="label_2" class="label">
-            Technical Writer
-        </div>
-        <div id="label_3" class="label">
-            Web Designer
-        </div>
+
     </div>
 
     <div class="container">
@@ -280,6 +91,7 @@
             <div class="col-md-4">
                 <h1><span><i class="fa fa-pie-chart"></i></span> Statistics</h1>
                 <hr>
+                <p>Here are some fancy charts I made with the help of <a href="http://d3js.org/">D3.js</a> and <a href="https://developer.github.com/v3/">GitHub API</a> to better visualize where I stand. Here's my <a href="http://codepen.io/jamwjam/pen/pJNevO">source code</a> if you're curious.</p>
                 <div class="d3">
                     <h3>GitHub Repo Composition</h3>
                     <div class="chart" id="github_chart"></div>
@@ -315,223 +127,13 @@
             <br>
         </div>
     </footer>
+
     <!-- Latest compiled and minified JavaScript -->
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="http://codepen.io/jamwjam/pen/XJNJWZ.js"></script>
-    <!--    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdpn.io/jamwjam/pen/XJNJWZ.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-    <script>
-        var github_data = {};
-        var gist_data = {};
-        var count = 0;
-        var stat_length;
-
-        get_repos();
-        get_gists();
-
-        function get_repos() {
-            $.getJSON("https://api.github.com/users/jamwjam/repos", function (result) {
-                stat_length = result.length;
-                for (i in result) {
-                    $.ajax({
-                        type: "GET",
-                        url: result[i].languages_url,
-                        dataType: "json",
-                        success: function (result) {
-                            handle_stats("#github_chart", result);
-                        }
-                    });
-                }
-            });
-        }
-
-        function get_gists() {
-            var language, size;
-            $.getJSON("https://api.github.com/users/jamwjam/gists", function (result) {
-                for (i in result) {
-                    for (f in result[i].files) {
-                        language = result[i].files[f].language;
-                        size = result[i].files[f].size;
-
-                        if (language == null) {
-                            language = "PlainText";
-                        }
-
-                        if (gist_data[language] == null)
-                            gist_data[language] = size;
-                        else
-                            gist_data[language] += size;
-                    }
-                }
-
-                render_pie_chart("#gist_chart", gist_data);
-            });
-        }
-
-
-        function handle_stats(id, result) {
-            for (key in result)
-                if (github_data[key] == null)
-                    github_data[key] = result[key];
-                else
-                    github_data[key] += result[key];
-
-            if (count == stat_length - 1) {
-                render_pie_chart(id, github_data);
-            }
-
-            count++;
-        }
-
-        function render_pie_chart(id, data) {
-            var data = format_data(data);
-
-            var color = d3.scale.category20c();
-
-            var width = 240,
-                height = 240,
-                radius = 120;
-
-            var inner = 70;
-
-            var arc = d3.svg.arc()
-                .outerRadius(radius - 60)
-                .innerRadius(radius - 10);
-
-            var arcOver = d3.svg.arc()
-                .innerRadius(radius - 60)
-                .outerRadius(radius);
-
-
-            var total = d3.sum(data, function (d) {
-                return d3.sum(d3.values(d));
-            });
-
-
-            var svg = d3.select(id).append("svg")
-                .attr("width", width)
-                .attr("height", height)
-                .append("g")
-                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-            var textTop = svg.append("text")
-                .attr("dy", ".35em")
-                .style("text-anchor", "middle")
-                .attr("class", "textTop")
-                .attr("y", -25);
-            
-            var textMiddle = svg.append("text")
-                .attr("dy", ".35em")
-                .style("text-anchor", "middle")
-                .attr("class", "textMiddle")
-                .text("Total")
-                .attr("y", -5);
-
-            var textBottom = svg.append("text")
-                .attr("dy", ".35em")
-                .style("text-anchor", "middle")
-                .attr("class", "textBottom")
-                .text((total / 1024).toFixed(2) + " kB")
-                .attr("y", 15);
-
-            var pie = d3.layout.pie()
-                .sort(null)
-                .value(function (d) {
-                    return d.value;
-                });
-
-            var g = svg.selectAll(".arc")
-                .data(pie(data))
-                .enter().append("g")
-                .attr("class", "arc")
-                .on("mouseover", function (d) {
-                    d3.select(this).select("path").transition()
-                        .duration(200)
-                        .attr("d", arcOver)
-                    textTop.text(((d3.select(this).datum().data.value / total) * 100).toFixed(2) + "%")
-                        .attr("y", -25);
-                    textMiddle.text(d3.select(this).datum().data.name)
-                        .attr("y", -5);
-                    textBottom.text((d3.select(this).datum().data.value / 1024).toFixed(2) + " kB")
-                        .attr("y", 15);
-                })
-                .on("mouseout", function (d) {
-                    d3.select(this).select("path").transition()
-                        .duration(100)
-                        .attr("d", arc)
-                    textTop.text("100.0%");
-                    textMiddle.text("Total")
-                        .attr("y", -5);
-                    textBottom.text((total / 1024).toFixed(2) + " kB");
-                })
-
-            g.append("path")
-                .attr("d", arc)
-                .style("fill", function (d, i) {
-                    return color(i);
-                })
-                .transition()
-                .ease("exp-out")
-                .duration(2000)
-                .attrTween("d", tweenPie)
-
-            var legend = d3.select(id).append("svg")
-                .attr("class", "legend")
-                .attr("width", radius)
-                .attr("height", radius * 2)
-                .selectAll("g")
-                .data(data)
-                .enter().append("g")
-                .attr("transform", function (d, i) {
-                    return "translate(0," + i * 20 + ")";
-                });
-
-            legend.append("circle")
-                .attr("cx", 10)
-                .attr("cy", 10)
-                .attr("r", 7)
-                .style("fill", function (d, i) {
-                    return color(i);
-                });
-
-            legend.append("text")
-                .attr("x", 24)
-                .attr("y", 9)
-                .attr("dy", ".35em")
-                .text(function (d) {
-                    return d.name;
-                });
-
-            function tweenPie(b) {
-                b.innerRadius = 0;
-                var i = d3.interpolate({
-                    startAngle: 0,
-                    endAngle: 0
-                }, b);
-                return function (t) {
-                    return arc(i(t));
-                };
-            }
-
-        }
-
-        function format_data(data) {
-            var result = [];
-
-            for (i in data) {
-                result.push({
-                    'name': i,
-                    'value': data[i]
-                });
-            }
-            return result;
-        }
-
-        function log(string) {
-            console.log(string);
-        }
-    </script>
+    <script src="//cdpn.io/jamwjam/pen/dovxGE.js"></script>
 </body>
 
 </html>
