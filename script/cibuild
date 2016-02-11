@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#!/usr/bin/env ruby
+
+require 'html/proofer'
+
 set -e # halt script on error
 
 bundle exec jekyll build
